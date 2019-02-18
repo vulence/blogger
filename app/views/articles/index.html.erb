@@ -1,4 +1,7 @@
-<h1>All Articles</h1>
+<h1>
+    All Articles
+    <%= link_to "Go to Tags listing", tags_path, style: "margin-left: 360px; color: goldenrod" %>
+</h1>
 
 <ul id="articles">
     <% @articles.each do |article| %>
