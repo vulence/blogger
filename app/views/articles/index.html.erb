@@ -1,6 +1,6 @@
 <h1>
     All Articles
-    <%= link_to "Go to Tags listing", tags_path, style: "margin-left: 360px; color: goldenrod" %>
+    <%= link_to "Go to Tags listing", tags_path, style: "margin-left: 100px; color: goldenrod" %>
 </h1>
 
 <ul id="articles">
@@ -9,6 +9,7 @@
             <%= link_to article.title, article_path(article), class: "article_title" %>
         </li>
     <% end %>
-
-    <%= link_to "Create a new article", new_article_path, class: "new_article" %>
+    <% if logged_in? %>
+        <%= link_to "Create a new article", new_article_path, class: "new_article" %>
+    <% end %>
 </ul>
